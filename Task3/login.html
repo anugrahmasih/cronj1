@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="css/signup.css">
+
+</head>
+<body>
+
+<form action="final.html"  method="POST" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Please fill to Login your account.</p>
+    <hr>
+
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required  id="email">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required  id="pass">
+
+  
+    <div class="clearfix">
+      <button type="submit"  onclick="Login()"    class="signupbtn">Login</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  function Login()
+  {
+     var email = document.getElementById('email').value;
+     var pass = document.getElementById('pass').value;
+
+
+     var email1 = localStorage.getItem('email1');
+     var pass1 = localStorage.getItem('pass1');
+
+
+     if(email == email1  &&  pass == pass1)
+     {
+
+         window.open("final.html");
+     }
+     else{
+      alert('your email and password is incorrect pleas try again')
+     }
+  }
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

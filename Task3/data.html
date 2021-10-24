@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Data page</title>
+  
+ <script src="js/login.js"></script>
+
+</head>
+<body>
+
+<div><br>
+  <form action=""      method="get">
+        <input autocomplete="off" autofocus name="q" placeholder="Query" type="search">
+        <input type="submit" onclick="search()" value="Search">
+    </form>
+</div><br>
+
+<div>
+<h2>Data will be printed here</h2><br>
+<p id="demo"></p>
+</div>
+
+
+<script>
+
+</script>
+
+
+
+
+
+
+<h2>Welcome:<script> document.write(localStorage.getItem('name1')) </script></h2>
+
+
+<h1>This is from Local Storage</h1>
+<h  id="data">Name: <script> document.write(localStorage.getItem('name1')) </script><br>
+Email: <script> document.write(localStorage.getItem('email1')) </script><br>
+ Password:<script> document.write(localStorage.getItem('pass1')) </script><br>
+  Confirm Password: <script> document.write(localStorage.getItem('psw1')) </script><br></h>
+<hr><br>
+
+<div id="result"></div>
+<div id="result1"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<div id="result4"></div>
+
+
+
+<h1>This is from Session Storage</h1>
+<script>
+var name=sessionStorage.getItem("name1");
+var email=sessionStorage.getItem("email1");
+var password=sessionStorage.getItem("pass1");
+var Confirm_password=sessionStorage.getItem("psw1"); </script>
+
+<h>Name:<script>document.write(localStorage.getItem('name1'))</script><br>
+  Email:<script>document.write(localStorage.getItem("email1"))</script><br>
+  Password:<script>document.write(localStorage.getItem("pass1"))</script><br>
+  Confirm Password:<script>document.write(localStorage.getItem("psw1"))</script><br></h>
+<hr><br>
+
+<div class="clearfix">
+  <button type="submit"  onclick="Logout()">Logout</button>
+    </div><br>
+
+<script>
+	
+function Logout()
+{
+	localStorage.clear();
+	
+}
+function log(myCallback){
+   sessionStorage.clear();
+}
+log(Logout);
+
+</script>
+
+
+
+<script>
+// Check browser support
+// if (typeof(Storage) !== "undefined") {
+//   // Store
+//     sessionStorage.setItem('name1')//'Anugrah masih')
+//     sessionStorage.setItem('email1')//,'anugrahmasih1012@gmail.com')
+//     // here pass1 becomes variable inside local storage so that we can target
+//     sessionStorage.setItem('pass1')//'anu@123')
+//     sessionStorage.setItem('psw1')//'anu@123')
+
+//   // Retrieve
+ 
+//   document.getElementById("result1").innerHTML = sessionStorage.getItem("name1");
+//   document.getElementById("result2").innerHTML = sessionStorage.getItem("email1");
+//   document.getElementById("result3").innerHTML = sessionStorage.getItem("pass1");
+//   document.getElementById("result4").innerHTML = sessionStorage.getItem("psw");
+// } else {
+//   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+// }
+</script>
+
+</body>
+</html>
