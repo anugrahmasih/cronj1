@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"  href="css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 5.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+
+</head>
+
+
+
+ <body>
+
+<!-- <div id="I">
+  <img src="images/blue.png">
+</div> -->
+
+
+ <img src="images/pic1.png"  id="I">
+
+<div id="f">
+
+<form action="res.html" >               <!-- style="border:1px solid #ccc"  -->
+  <div class="container">
+    <h1>Login</h1>
+    <p  style="font-size:13px; color:darkgray;">Let's get you all setup, Enter all the details or Login with<br>
+       <br>Google facebook or Linked in</p>
+    <hr>
+
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+     <label id="fg">
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Forgot Password?
+    </label>
+    
+    <div class="clearfix">
+      <button type="submit" style="background: #01579B 0% 0% no-repeat padding-box;
+border-radius: 9px; opacity: 1; width: 750px; height: 40px;"   onclick="Login()" class="signupbtn">Login</button>
+    </div>
+  </div>
+</form>
+
+<p id="o" style="font-size:15px; color:darkgray;"> Or Login with</p>
+</div>
+
+
+<div id="mar">
+
+<div class="row">
+  <div id="g" class="column">
+    <img src="images/google.png"  style="width:100%">
+  </div>
+  <div id="g" class="column">
+    <img src="images/face.png" style="width:100%">
+  </div>
+  <div  id="g" class="column">
+    <img src="images/link.png"style="width:100%">
+  </div>
+</div>
+
+</div>
+
+
+
+<script>
+  
+  function Login()
+  {
+     var email = document.getElementById('email').value;
+     var pass = document.getElementById('pass').value;
+
+
+     var email1 = localStorage.getItem('email1');
+     var pass1 = localStorage.getItem('pass1');
+
+
+     if(email == email1  &&  pass == pass1)
+     {
+
+         window.open("final.html");
+     }
+     else{
+      alert('your email and password is incorrect pleas try again')
+     }
+  }
+
+
+</script>
+
+
+
+</body>
+</html>
